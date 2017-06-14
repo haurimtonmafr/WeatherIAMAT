@@ -56,14 +56,18 @@ class WebServicesController {
                     let photos = photosArray.filter({ photo in
                         return photo["title"].string!.lowercased().contains(cityName)
                     })
-                    let photo = photos[Int(arc4random_uniform(UInt32((photos.count - 1) - 0)))]
-                    if let farm_id = photo["farm"].int, let server_id = photo["server"].string, let photo_id = photo["id"].string, let secret = photo["secret"].string {
-                        let urlString = "https://farm\(farm_id).staticflickr.com/\(server_id)/\(photo_id)_\(secret)_b.jpg"
-                        if let url = URL(string: urlString) {
-                            Alamofire.request(url).responseImage(completionHandler: { response in
-                                handleComplete(response.result.error, response.result.value)
-                            })
+                    if !photos.isEmpty {
+                        let photo = photos[Int(arc4random_uniform(UInt32((photos.count - 1) - 0)))]
+                        if let farm_id = photo["farm"].int, let server_id = photo["server"].string, let photo_id = photo["id"].string, let secret = photo["secret"].string {
+                            let urlString = "https://farm\(farm_id).staticflickr.com/\(server_id)/\(photo_id)_\(secret)_b.jpg"
+                            if let url = URL(string: urlString) {
+                                Alamofire.request(url).responseImage(completionHandler: { response in
+                                    handleComplete(response.result.error, response.result.value)
+                                })
+                            }
                         }
+                    } else {
+                        handleComplete(Error.self as? Error,nil)
                     }
                 } else {
                     handleComplete(Error.self as? Error,nil)
