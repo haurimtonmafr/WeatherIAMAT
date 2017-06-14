@@ -1,3 +1,4 @@
 github "danielgindi/Charts" == 3.0.2
 github "SwiftyJSON/SwiftyJSON"
 github "Alamofire/Alamofire" ~> 4.4
+github "Alamofire/AlamofireImage" ~> 3.1

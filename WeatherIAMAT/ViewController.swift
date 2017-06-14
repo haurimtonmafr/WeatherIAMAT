@@ -14,6 +14,7 @@ import Charts
 class ViewController: UIViewController {
     
     // MARK: - Properties
+    @IBOutlet weak var imageBackground: UIImageView!
     @IBOutlet weak var labelCity: UILabel!
     @IBOutlet weak var labelCountry: UILabel!
     @IBOutlet weak var viewBarChart: BarChartView!
@@ -136,6 +137,7 @@ class ViewController: UIViewController {
         // Set bar chart data to previously created data
         viewBarChart.notifyDataSetChanged()
         viewBarChart.data = chartData
+        viewBarChart.backgroundColor = UIColor.white.withAlphaComponent(0.6)
         
         //chart animation
         viewBarChart.animate(xAxisDuration: 1.5, yAxisDuration: 1.5, easingOption: .linear)
@@ -151,6 +153,14 @@ extension ViewController: CLLocationManagerDelegate {
                 if let city = data["city"]["name"].string {
                     self.labelCity.text = city
                     self.labelCity.sizeToFit()
+                    WebServicesController.getCityPicture(lat: "\(locations[0].coordinate.latitude)", lon: "\(locations[0].coordinate.longitude)", cityName: city.lowercased(), handleComplete: { (error, image) in
+                        if let image = image {
+                            self.imageBackground.image = image
+                            self.imageBackground.alpha = 0.4
+                        } else {
+                            NSLog("ERROR DOWNLOADING CITY IMAGE \"\(error)\"")
+                        }
+                    })
                 }
                 if let country = data["city"]["country"].string {
                     self.labelCountry.text = country

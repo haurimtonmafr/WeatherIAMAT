@@ -18,6 +18,7 @@
 		97BFF5E31EF08FE000DEABA3 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BFF5E01EF08FE000DEABA3 /* Alamofire.framework */; };
 		97BFF5E41EF08FE000DEABA3 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BFF5E11EF08FE000DEABA3 /* Charts.framework */; };
 		97BFF5E51EF08FE000DEABA3 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BFF5E21EF08FE000DEABA3 /* SwiftyJSON.framework */; };
+		97BFF5EA1EF0FEE800DEABA3 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97BFF5E91EF0FEE800DEABA3 /* AlamofireImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		97BFF5E01EF08FE000DEABA3 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		97BFF5E11EF08FE000DEABA3 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = Carthage/Build/iOS/Charts.framework; sourceTree = "<group>"; };
 		97BFF5E21EF08FE000DEABA3 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		97BFF5E91EF0FEE800DEABA3 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97BFF5E31EF08FE000DEABA3 /* Alamofire.framework in Frameworks */,
+				97BFF5EA1EF0FEE800DEABA3 /* AlamofireImage.framework in Frameworks */,
 				97BFF5E41EF08FE000DEABA3 /* Charts.framework in Frameworks */,
 				97BFF5E51EF08FE000DEABA3 /* SwiftyJSON.framework in Frameworks */,
 			);
@@ -141,6 +144,7 @@
 		97BFF5DF1EF08FDF00DEABA3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				97BFF5E91EF0FEE800DEABA3 /* AlamofireImage.framework */,
 				97BFF5E01EF08FE000DEABA3 /* Alamofire.framework */,
 				97BFF5E11EF08FE000DEABA3 /* Charts.framework */,
 				97BFF5E21EF08FE000DEABA3 /* SwiftyJSON.framework */,
@@ -291,6 +295,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Charts.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
 			);
 			outputPaths = (
 			);

@@ -22,6 +22,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qB1-Vw-uSs">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CsW-jL-qLe">
                                 <rect key="frame" x="152" y="40" width="72.5" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -44,17 +47,22 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="qB1-Vw-uSs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="804-rZ-U1L"/>
                             <constraint firstItem="7am-Ry-rVW" firstAttribute="top" secondItem="pxl-PZ-g7K" secondAttribute="bottom" constant="50" id="CTG-m1-Nff"/>
                             <constraint firstItem="7am-Ry-rVW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CWh-ej-1Cz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qB1-Vw-uSs" secondAttribute="bottom" id="HDe-BZ-vSK"/>
                             <constraint firstItem="7am-Ry-rVW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="J1N-Pi-GVW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7am-Ry-rVW" secondAttribute="trailing" constant="20" id="N3j-Vz-eY6"/>
                             <constraint firstItem="pxl-PZ-g7K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="P4y-z0-bXa"/>
+                            <constraint firstItem="qB1-Vw-uSs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TQc-yl-7VB"/>
                             <constraint firstItem="CsW-jL-qLe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Wte-uR-fZu"/>
                             <constraint firstItem="CsW-jL-qLe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YRd-jD-wcb"/>
+                            <constraint firstAttribute="trailing" secondItem="qB1-Vw-uSs" secondAttribute="trailing" id="c9N-OW-p5X"/>
                             <constraint firstItem="pxl-PZ-g7K" firstAttribute="top" secondItem="CsW-jL-qLe" secondAttribute="bottom" constant="10" id="klA-Gn-vBq"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imageBackground" destination="qB1-Vw-uSs" id="fCm-GY-lgA"/>
                         <outlet property="labelCity" destination="CsW-jL-qLe" id="9hV-N6-PQn"/>
                         <outlet property="labelCountry" destination="pxl-PZ-g7K" id="8NW-yf-a1e"/>
                         <outlet property="viewBarChart" destination="7am-Ry-rVW" id="WbT-kr-jKk"/>
@@ -62,6 +70,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
         </scene>
     </scenes>
 </document>
